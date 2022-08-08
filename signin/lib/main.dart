@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+ import './home.dart';
+void main() => runApp(  MyApp());
  
-void main() => runApp( const MyApp());
- 
-class MyApp extends _MyStatefulWidgetState {
+class MyApp extends StatelessWidget {
  
  
   static const String _title = 'Flutter App';
@@ -94,12 +94,16 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   onPressed: () {
                     print(nameController.text);
                     print(passwordController.text);
+                    Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => MyLogin() ),
+                     );
                   },
                 )
             ),
             Row(
               children: <Widget>[
-                const Text('Does not have account?'),
+               const Text('Does not have account?'),
                 TextButton(
                   child: const Text(
                     'Sign in',
