@@ -150,12 +150,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ],
         )
         );
-        Future SignIn() async{
-    await FirebaseAuth instance.signInwithAndPassword();
-    email:emailController.text.trim(),
-    password:passwordController.text.trim(),
-    );
-  }
+        
 
      
   }
