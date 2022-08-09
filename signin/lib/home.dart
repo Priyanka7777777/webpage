@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
+import 'main.dart';
+
+
+
 class MyLogin extends StatefulWidget{
      const MyLogin({Key? key}):super(key:key);
       @override
@@ -48,11 +52,11 @@ class MyLogin extends StatefulWidget{
                   onPressed: () {
                     Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) =>MyApp() ),
+                              MaterialPageRoute(builder: (context) =>MyApp()),
                      );
                     //signup screen
                   },
-                )
+                )  
               ],
               mainAxisAlignment: MainAxisAlignment.center,
             ),

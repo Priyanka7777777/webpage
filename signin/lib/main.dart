@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
  import './home.dart';
+ import './create.dart';
+
 void main() => runApp(  MyApp());
  
 class MyApp extends StatelessWidget {
@@ -101,6 +103,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   },
                 )
             ),
+
+            
             Row(
               children: <Widget>[
                const Text('Does not have account?'),
@@ -110,6 +114,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     style: TextStyle(fontSize: 20),
                   ),
                   onPressed: () {
+                    Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) =>  MyRegister() ),
+                     );
                     //signup screen
                   },
                 )
@@ -117,7 +125,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               mainAxisAlignment: MainAxisAlignment.center,
             ),
           ],
-        ));
+        )
+        );
       
   }
 }
